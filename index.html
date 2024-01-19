@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Parte do mp3 -->
+        </header>
+        <main>
+            <div class="lado-esquerdo">
+                <div class="previsao-principal">
+                    <div class="caixa-busca">
+                        <input type="search" class="input-busca">
+                        <button class="img-busca" type="button">
+                            <img src="./icon/search.svg" alt="Ícone de busca. Site: icon-icons"
+                                title="Clique aqui ou pressione enter para realizar a sua busca.">
+                        </button>
+                    </div>
+                    <div class="caixa-img-clima">
+                        <p class="nome-local">Undefined</p>
+                        <p class="pais">...</p>
+                        <img  class="icon-clima" src="./icon/ensolarado.svg" alt="">
+                        <p class="descricao-clima">Undefined</p>
+                    </div>
+
+                    <div class="caixa-temperatura">
+                        <img class="positivo" style="display: non;" src="./icon/temperatura positivo.svg" alt="Ícone de termômetro">
+                        <img class="negativo" style="display: none;" src="./icon/temperatura negativo.svg" alt="Ícone de termômetro">
+
+                        <p class="temperatura-atual">50°C</p>
+                    </div>
+                    <div class="min-max">
+                        <!-- <p class="temp-min">Min: 8°C</p> -->
+                        <!-- <p class="temp-max">Max: 10°C</p> -->
+                        <p class="sensacao-termica">Sensação térmica: 35°C</p>
+                    </div>
+                    <div class="detalhes">
+                        <p class="vento">Ventos: 15km/h</p>
+                        <p class="humidade">Humidade: </p>
+                        <p class="visibilidade">Visibilidade: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="lado-direito">
+                <div class="proximos-dias d1">
+                    <p class="datas">Dia da semana</p>
+                    <img class="previsao1" src="./icon/noite chuva.svg" alt="">
+                    <p class="previsaoMin previsaoMin1">Min:</p>
+                    <p class="previsaoMax previsaoMax1">Max:</p>
+                </div>
+                <div class="proximos-dias d2" >
+                    <p class="datas">Dia da semana</p>
+                    <img class="previsao2" src="./icon/noite chuva.svg" alt="">
+                    <p class="previsaoMin previsaoMin2">Min:</p>
+                    <p class="previsaoMax previsaoMax2">Max:</p>
+                </div>
+                <div class="proximos-dias d3" >
+                    <p class="datas">Dia da semana</p>
+                    <img class="previsao3" src="./icon/noite chuva.svg" alt="">
+                    <p class="previsaoMin previsaoMin3">Min:</p>
+                    <p class="previsaoMax previsaoMax3">Max:</p>
+                </div>
+                <div class="proximos-dias d4" x>
+                    <p class="datas">Dia da semana</p>
+                    <img class="previsao4" src="./icon/noite chuva.svg" alt="">
+                    <p class="previsaoMin previsaoMin4">Min:</p>
+                    <p class="previsaoMax previsaoMax4">Max:</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/main2.js"></script>
+    <script src="./js/imagens2.js"></script>
+    <!-- <script src="./js/main.js"></script>
+    <script src="./js/imagens.js"></script> -->
+</body>
+
+</html>
