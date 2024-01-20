@@ -31,5 +31,8 @@ async function apiData(lat, lon){
   });
   const responseData = response.data;
   console.log(responseData)
+  nomeLocal.textContent = responseData.name;
 }
+
+const nomeLocal = document.querySelector('.nome-local');
 
