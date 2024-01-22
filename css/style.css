@@ -56,11 +56,20 @@ main {
     /* width: 100%; */
 }
 
+.botao-de-adicionar{
+    height: 26px;
+}
+
+.caixa-busca > button > img{
+    height: 26px;
+}
+
 button,
-input {
+input{
     height: 30px;
     background-color: rgb(160, 236, 255);
     border-radius: 5px;
+    text-align: center;
 }
 
 input{
