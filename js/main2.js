@@ -50,6 +50,7 @@ const caixaBusca = document.querySelector('.caixa-busca');
 const adicionarLocal = document.querySelector('.img-adicionar');
 const inputBusca = document.querySelector('.input-busca');
 const btnBusca = document.querySelector('.img-busca');
+inputBusca.setAttribute('autocomplete', 'off');
 //caixa temperatura
 const imgPositivo = document.querySelector('.positivo');
 const imgNegativo = document.querySelector('.negativo');
@@ -63,6 +64,7 @@ const visibilidade = document.querySelector('.visibilidade');
 const ultiams3Horas = document.querySelector('.ultimas3Horas');
 //elementos criados dinâmicamente para favoritar local e renderizar dados ao iniciar seção
 const inputCriado = document.createElement('input');
+inputCriado.setAttribute('autocomplete', 'off');
 const botaoOK = document.createElement('button');
 const cancelarAdd = document.createElement('button');
 const imgCancelar = document.createElement('img');
@@ -182,6 +184,7 @@ function renderizarLadoEsquerdo(response) {
     visibilidade.textContent = `Visibilidade: ${(response.list[0].visibility / 1000).toFixed(1)}Km`;
     sensacaoTermica.textContent = `Sensação térmica: ${response.list[0].main.feels_like.toFixed(1)}°C`;
     ultiams3Horas.textContent = `Chuvas nas últimas 3 horas: ${response.list[0].rain ? response.list[0].rain['3h'] + ' mm' : '0 mm'}`;
+    
   }
   function imagensClima() {
     const descricaoClimaAPI = response.list[0].weather[0].description;
