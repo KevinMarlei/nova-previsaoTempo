@@ -181,7 +181,7 @@ function renderizarLadoEsquerdo(response) {
     humidade.textContent = `Humidade: ${response.list[0].main.humidity.toFixed(1)}%`;
     visibilidade.textContent = `Visibilidade: ${(response.list[0].visibility / 1000).toFixed(1)}Km`;
     sensacaoTermica.textContent = `Sensação térmica: ${response.list[0].main.feels_like.toFixed(1)}°C`;
-    ultiams3Horas.textContent = `Chuvas nas últimas 3 horas: ${response.list[0].rain['3h']} mm`;
+    ultiams3Horas.textContent = `Chuvas nas últimas 3 horas: ${response.list[0].rain ? response.list[0].rain['3h'] + ' mm' : '0 mm'}`;
   }
   function imagensClima() {
     const descricaoClimaAPI = response.list[0].weather[0].description;
