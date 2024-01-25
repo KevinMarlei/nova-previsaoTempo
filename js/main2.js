@@ -50,7 +50,6 @@ const caixaBusca = document.querySelector('.caixa-busca');
 const adicionarLocal = document.querySelector('.img-adicionar');
 const inputBusca = document.querySelector('.input-busca');
 const btnBusca = document.querySelector('.img-busca');
-inputBusca.setAttribute('autocomplete', 'off');
 //caixa temperatura
 const imgPositivo = document.querySelector('.positivo');
 const imgNegativo = document.querySelector('.negativo');
@@ -64,7 +63,6 @@ const visibilidade = document.querySelector('.visibilidade');
 const ultiams3Horas = document.querySelector('.ultimas3Horas');
 //elementos criados dinâmicamente para favoritar local e renderizar dados ao iniciar seção
 const inputCriado = document.createElement('input');
-inputCriado.setAttribute('autocomplete', 'off');
 const botaoOK = document.createElement('button');
 const cancelarAdd = document.createElement('button');
 const imgCancelar = document.createElement('img');
