@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <title>Previsão do Tempo</title>
 </head>
 
@@ -22,18 +29,22 @@
                             <img src="./icon/search.svg" alt="Ícone de busca. Site: icon-icons"
                                 title="Clique aqui ou pressione enter para realizar a sua busca.">
                         </button>
-                        <button class="img-adicionar"><img class="botao-de-adicionar" src="./icon/adicionar.svg" alt="Botão para adicionar um local de pesquisa automatico" title="Adicione ou mude um local para realizar a previsão automatica ao iniciar seção"></button>
+                        <button class="img-adicionar"><img class="botao-de-adicionar" src="./icon/adicionar.svg"
+                                alt="Botão para adicionar um local de pesquisa automatico"
+                                title="Adicione ou mude um local para realizar a previsão automatica ao iniciar seção"></button>
                     </div>
                     <div class="caixa-img-clima">
                         <p class="nome-local">Undefined</p>
                         <p class="pais">...</p>
-                        <img  class="icon-clima" src="./icon/ensolarado.svg" alt="">
+                        <img class="icon-clima" src="./icon/ensolarado.svg" alt="">
                         <p class="descricao-clima">Undefined</p>
                     </div>
 
                     <div class="caixa-temperatura">
-                        <img class="positivo" style="display: non;" src="./icon/temperatura positivo.svg" alt="Ícone de termômetro">
-                        <img class="negativo" style="display: none;" src="./icon/temperatura negativo.svg" alt="Ícone de termômetro">
+                        <img class="positivo" style="display: non;" src="./icon/temperatura positivo.svg"
+                            alt="Ícone de termômetro">
+                        <img class="negativo" style="display: none;" src="./icon/temperatura negativo.svg"
+                            alt="Ícone de termômetro">
 
                         <p class="temperatura-atual">50°C</p>
                     </div>
@@ -47,30 +58,35 @@
                         <p class="humidade">Humidade: </p>
                         <p class="visibilidade">Visibilidade: </p>
                     </div>
+                    <div id="map" style="width: 100%; height: 26%; margin-top: .5rem;"></div>
                 </div>
             </div>
             <div class="lado-direito">
                 <div class="proximos-dias d1">
                     <p class="datas">Dia da semana</p>
                     <img class="previsao1" src="./icon/noite chuva.svg" alt="">
+                    <p class="prev1">asdasdasd</p>
                     <p class="previsaoMin previsaoMin1">Min:</p>
                     <p class="previsaoMax previsaoMax1">Max:</p>
                 </div>
-                <div class="proximos-dias d2" >
+                <div class="proximos-dias d2">
                     <p class="datas">Dia da semana</p>
                     <img class="previsao2" src="./icon/noite chuva.svg" alt="">
+                    <p class="prev2">asdasdasd</p>
                     <p class="previsaoMin previsaoMin2">Min:</p>
                     <p class="previsaoMax previsaoMax2">Max:</p>
                 </div>
-                <div class="proximos-dias d3" >
+                <div class="proximos-dias d3">
                     <p class="datas">Dia da semana</p>
                     <img class="previsao3" src="./icon/noite chuva.svg" alt="">
+                    <p class="prev3">asdasdasd</p>
                     <p class="previsaoMin previsaoMin3">Min:</p>
                     <p class="previsaoMax previsaoMax3">Max:</p>
                 </div>
                 <div class="proximos-dias d4" x>
                     <p class="datas">Dia da semana</p>
                     <img class="previsao4" src="./icon/noite chuva.svg" alt="">
+                    <p class="prev4">asdasdasd</p>
                     <p class="previsaoMin previsaoMin4">Min:</p>
                     <p class="previsaoMax previsaoMax4">Max:</p>
                 </div>
@@ -79,10 +95,13 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/main2.js"></script>
+    <!-- <script src="./js/mudando.js"></script> -->
+
     <script src="./js/ladoDireito.js"></script>
     <script src="./js/imagens2.js"></script>
     <!-- <script src="./js/main.js"></script>
-    <script src="./js/imagens.js"></script> -->
+        <script src="./js/imagens.js"></script> -->
+    <script src="./js/leaflet.js"></script>
 </body>
 
 </html>
