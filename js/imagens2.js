@@ -1,17 +1,17 @@
 const imagens = [
     {
         descricao: ['nuvens dispersas', 'poucas nuvens', 'nuvens quebradas', 'algumas nuvens'],
-        giffDia: 'giff/dia-parcialmente-nublado.gif',
-        giffNoite: 'giff/noite-parcialmente-nublado.gif',
+        giffDia: './giff/dia-parcialmente-nublado.gif',
+        giffNoite: './giff/noite-parcialmente-nublado.gif',
         iconDia: './icon/dia-parcialmente-nublado.svg',
         iconNoite: './icon/noite-parcialmente-nublado.svg'
     },
     {
         descricao: 'nublado',
-        giffDia: 'giff/dia-nublado.gif',
-        giffNoite: 'giff/noite-nublado.gif',
-        iconDia: 'icon/nublado.svg',
-        iconNoite: 'icon/noite-nublado.svg'
+        giffDia: './giff/dia-nublado.gif',
+        giffNoite: './giff/noite-nublado.gif',
+        iconDia: './icon/nublado.svg',
+        iconNoite: './icon/noite-nublado.svg'
     },
     {
         descricao: 'céu limpo',
