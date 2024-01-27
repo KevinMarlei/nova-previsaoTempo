@@ -123,15 +123,15 @@ botaoOK.addEventListener('click', async (event) => {
   }
 });
 
-inputCriado.addEventListener('keyup',async (e) => {
+inputCriado.addEventListener('keyup', async (e) => {
   if (e.key === 'Enter') {
     localidade = inputCriado.value;
-    if(!localidade){
+    if (!localidade) {
       alert('Campo vazio ou local inexistente. Favor inserir um nome de local válido!');
       return;
     }
     const response = await localStorageReserv(localidade);
-    if(!response){
+    if (!response) {
       localStorage.setItem("localidade", localidade);
       inputCriado.value = '';
       caixaBusca.removeChild(inputCriado);
@@ -182,7 +182,7 @@ function renderizarLadoEsquerdo(response) {
     visibilidade.textContent = `Visibilidade: ${(response.list[0].visibility / 1000).toFixed(1)}Km`;
     sensacaoTermica.textContent = `Sensação térmica: ${response.list[0].main.feels_like.toFixed(1)}°C`;
     ultiams3Horas.textContent = `Chuvas nas últimas 3 horas: ${response.list[0].rain ? response.list[0].rain['3h'] + ' mm' : '0 mm'}`;
-    
+
   }
   function imagensClima() {
     const descricaoClimaAPI = response.list[0].weather[0].description;
@@ -190,20 +190,28 @@ function renderizarLadoEsquerdo(response) {
     const urlImagens = imagens.find(img => img.descricao.includes(descricaoClimaAPI));
     const codigoIcon = response.list[0].weather[0].icon;
     const dia = codigoIcon.includes('d');
-    if (dia) {
-      imgClima.src = urlImagens.iconDia;
-      ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffDia}')`;
-    } else {
-      imgClima.src = urlImagens.iconNoite;
-      ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffNoite}')`;
-    }
-    if (tempAPI >= 0) {
-      imgPositivo.style.display = 'flex';
-      imgNegativo.style.display = 'none';
-    } else {
-      imgPositivo.style.display = 'none';
-      imgNegativo.style.display = 'flex';
-    }
+
+    const horarioAtual = new Date().getHours();
+  const horarioNoturno = 18;
+
+  // Obtém a data e hora do objeto response
+  const horarioPrevisao = new Date(response.list[0].dt_txt);
+  const isHorarioPrevisao18h = horarioPrevisao.getHours() === 18;
+
+  if ((dia && horarioAtual < horarioNoturno) || (isHorarioPrevisao18h && horarioAtual < 18)) {
+    imgClima.src = urlImagens.iconDia;
+    ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffDia}')`;
+  } else {
+    imgClima.src = urlImagens.iconNoite;
+    ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffNoite}')`;
+  }
+  if (tempAPI >= 0) {
+    imgPositivo.style.display = 'flex';
+    imgNegativo.style.display = 'none';
+  } else {
+    imgPositivo.style.display = 'none';
+    imgNegativo.style.display = 'flex';
+  }
   }
   console.log(response.city.coord.lat, response.city.coord.lon)
   renderTextosLadoEsquerdo();
