@@ -1,0 +1,85 @@
+@media only screen and (max-width: 900px) and (max-height: 1180px) {
+
+   * {
+      margin: 0;
+      padding: 0;
+   }
+
+   .container {
+      display: contents;
+      flex-direction: row;
+      /* Alteração para linhas horizontais */
+      height: 100%;
+      width: 100%;
+   }
+
+   main {
+      display: flex;
+      flex-direction: column;
+      /* Alteração para linhas horizontais */
+      width: 100%;
+      height: 100%;
+      /* Ajuste a altura para ser dinâmica */
+   }
+
+   .lado-esquerdo {
+      max-width: 100%;
+      /* Ajuste a largura para ocupar toda a tela */
+      height: 40%;
+      background-size: cover;
+      background-position: center;
+   }
+
+   .previsao-principal {
+      height: 100%;
+      width: 100%;
+   }
+
+   .caixa-img-clima {
+      height: 45%;
+   }
+
+   .min-max {
+      margin-bottom: .5rem;
+   }
+
+   
+
+   #map {
+      height: 57%;
+      width: 105%;
+      transform: translateY(180%);
+      translate: -2%;
+   }
+
+   .proximos-dias {
+      width: 100%;
+      /* Ajuste a largura para ocupar toda a tela */
+      margin-bottom: 1rem;
+      /* Adicione margem inferior para separar os itens */
+   }
+
+   .caixa-temperatura {
+      display: flex;
+      width: 60%;
+      justify-content: end;
+   }
+
+   .icon-clima {
+      height: 3rem;
+      margin: 0;
+      padding: 0;
+   }
+
+   .positivo,
+   .negativo {
+      height: 1.5rem;
+   }
+
+   /*//////////////////////*/
+
+   .lado-direito {
+      width: 100%;
+      height: 40%;
+   }
+}

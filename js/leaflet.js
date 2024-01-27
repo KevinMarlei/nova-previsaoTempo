@@ -11,6 +11,8 @@ function exibirMapa(lat, lon){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     
+    map.zoomControl.remove();
+
     L.marker([lat, lon]).addTo(map)
         // .bindPopup()
         .openPopup();

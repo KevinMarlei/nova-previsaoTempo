@@ -22,7 +22,6 @@ body {
 }
 
 .container {
-    background-color: green;
     height: 80%;
     width: 80%;
     display: flex;
@@ -143,10 +142,14 @@ button {
     font-size: clamp(0.5em, .5em + .5vw, 3em);
 }
 
+#map{
+    width: 100%;
+    height: 15%;
+    margin-top: 0.5rem;
+}
 /* /////////////////////////////// */
 .lado-direito {
     width: 80%;
-    background-color: pink;
     display: flex;
     justify-content: center;
 }

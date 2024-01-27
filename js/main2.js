@@ -186,6 +186,7 @@ function renderizarLadoEsquerdo(response) {
   }
   function imagensClima() {
     const descricaoClimaAPI = response.list[0].weather[0].description;
+    console.log(descricaoClimaAPI, 'AQUIUIUIUIUIUIU')
     const urlImagens = imagens.find(img => img.descricao.includes(descricaoClimaAPI));
     const codigoIcon = response.list[0].weather[0].icon;
     const dia = codigoIcon.includes('d');
