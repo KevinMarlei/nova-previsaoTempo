@@ -167,6 +167,8 @@ button {
 }
 .proximos-dias > p{
     font-size: clamp(0.5em, .5em + .5vw, 3em);
+    white-space: pre-line;
+    text-align: center;
 }
 
 .proximos-dias > img{

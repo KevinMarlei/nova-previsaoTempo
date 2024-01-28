@@ -36,26 +36,45 @@ function datas(response) {
 }
 
 
-function exibirDatas(responseDatas) {
+function obterDiasDaSemana() {
+    const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+    const hoje = new Date(+1);
+    const diasFormatados = [];
+  
+    for (let i = 0; i < 5; i++) {
+      const dataAtualizada = new Date();
+      dataAtualizada.setDate(hoje.getDate() + i);
+      const diaSemana = diasDaSemana[dataAtualizada.getDay()];  
+      diasFormatados.push({ diaSemana});
+    }
+  
+    return diasFormatados;
+  }
+  
+  function exibirDatas(responseDatas) {
     let datas = document.querySelectorAll(`.datas`);
     if (Array.isArray(responseDatas) && responseDatas.length > 1) {
-        const dataZero = responseDatas.slice(1);
-        const datasPorDia = [dataZero[0][0], dataZero[1][0], dataZero[2][0], dataZero[3][0]];
-        console.log(datasPorDia);
-        datas.forEach((element, index) => {
-            const dataOriginal = datasPorDia[index].dt_txt.slice(0, 10);
-            const [ano, mes, dia] = dataOriginal.split('-');
-            const dataFormatada = `${dia}-${mes}-${ano}`;
-            element.textContent = dataFormatada;
-            renderizarImagensLadoDireito(dataFormatada);
-        });
-        armazenarIconPorDia(datasPorDia);
+      const dataZero = responseDatas.slice(1);
+      const datasPorDia = [dataZero[0][0], dataZero[1][0], dataZero[2][0], dataZero[3][0]];
+      
+      const diasDaSemana = obterDiasDaSemana();
+      
+      datas.forEach((element, index) => {
+        const dataOriginal = datasPorDia[index].dt_txt.slice(0, 10);
+        const [ano, mes, dia] = dataOriginal.split('-');
+        const dataFormatada = `${dia}-${mes}-${ano}`;
+        const diaSemana = diasDaSemana[index].diaSemana;
+  
+        element.textContent = `${diaSemana}\n ${dataFormatada}`;
+      });
+  
+      armazenarIconPorDia(datasPorDia);
     }
-}
-
-function renderizarImagensLadoDireito(element){
-    console.log(element)
-}
+  }
+  
+  const diasDaSemana = obterDiasDaSemana();
+  console.log(diasDaSemana);
+  
 
 const previsaoLocalStorage = apiForecast(localStorage.getItem("localidade"))
 if (previsaoLocalStorage) {
