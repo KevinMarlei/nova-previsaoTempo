@@ -87,7 +87,7 @@ button {
 }
 
 .nome-local {
-    font-size: clamp(0.5em, .5em + .9vw, 2em);
+    font-size: clamp(0.5em, .9em + .9vw, 2em);
     font-weight: 700;
     text-align: center;
 }
