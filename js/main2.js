@@ -16,7 +16,8 @@ async function apiData(local, estado, pais) {
     console.log(responseData);
     renderizarLadoEsquerdo(responseData);
   } catch (error) {
-    console.error('Erro na requisição api', error);
+    console.error('Erro na requisição api', error)
+    alert('Nome do local inválido.\nVocê pode utilizar: 1-Cidade ou bairro, sufixo do estado, sufixo do país;\n2-Estado ou Estado, sufixo do país;\n3-País.');
   }
 }
 

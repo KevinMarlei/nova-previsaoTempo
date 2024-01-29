@@ -25,7 +25,7 @@
    .lado-esquerdo {
       max-width: 100%;
       /* Ajuste a largura para ocupar toda a tela */
-      height: 40%;
+      height: 41%;
       background-size: cover;
       background-position: center;
    }
@@ -46,10 +46,10 @@
    
 
    #map {
-      height: 57%;
-      width: 103%;
-      transform: translateY(181%);
-      translate: -1.5%;
+      height: 54%;
+      width: 105%;
+      transform: translateY(180%);
+      translate: -2%;
    }
 
    .proximos-dias {
