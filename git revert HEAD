@@ -1,0 +1,115 @@
+[33mcommit 7c7c867cc14291f65db1b956785a7dc16d41b426[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Tue Jan 30 19:51:42 2024 +0100
+
+    Adição de msg raios
+
+[33mcommit de9a5e630da3b8df35cbcf62f8dd4e677cd57ca0[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Mon Jan 29 17:47:58 2024 +0100
+
+    Adição de mensagem de erro para nomes incorretos
+
+[33mcommit 62590c912e52dc44d91286f42ebb61e292dd4a5c[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Mon Jan 29 16:54:07 2024 +0100
+
+    Remoção de scripts de testes e ajustes no tamanho
+    e posição do mapa, e ajustes no tamanho do
+    lado-esquerdo da mediaQuery.
+
+[33mcommit 29452a832832c55a59beca93619ef72c1dd3d02d[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sun Jan 28 17:18:45 2024 +0100
+
+    pequeno ajuste no mapa
+
+[33mcommit e1ec0236d0b2c801f9e6d62f28fcd68524fb80ef[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sun Jan 28 17:07:32 2024 +0100
+
+    Pequeno aumento no tamanho da fonte do nome-local
+
+[33mcommit fac96f6af2c3abac942032b39180335575ef0d54[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sun Jan 28 14:30:01 2024 +0100
+
+    Adição de favicon
+
+[33mcommit 6fa2a6bf0d41480a978e4b579df88db5f2f6ccc9[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sun Jan 28 13:13:34 2024 +0100
+
+    Adição de dias da semana
+
+[33mcommit 53637752a750499f4a6a314573cb7f9e4468c026[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sat Jan 27 17:43:47 2024 +0100
+
+    Adição de ./ nas duas primeiras chaves dos dois primeiros objetos de imagens
+
+[33mcommit eaad8442fcb05928a61c5f5c573ab053d71438fb[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sat Jan 27 17:37:27 2024 +0100
+
+    Pequena adição de validicação de horários para exibição de elementos diurnos por motivos conflitantes entre o horário do usuário e o intervalo de horário da API
+
+[33mcommit 1fc872613a1f9bdf3a5193f032b7c77f50af757f[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sat Jan 27 13:24:33 2024 +0100
+
+    Adição de mediaQuerry  900 por 1180.
+
+[33mcommit 9e7f98ab2e3fee1dfe4b2f9228066e0003b7b95c[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Fri Jan 26 00:12:53 2024 +0100
+
+    Remoção do autocomplete off em ambos os inputs. Por motivos que desconheço o uso do mesmo ocasionou diversos erros.
+
+[33mcommit 915c6d5383a119ad46ac789e9bec9b7490954188[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Fri Jan 26 00:06:25 2024 +0100
+
+    Uso do autocomplete off em ambos os inputs
+
+[33mcommit 498e0827c139b356659150e176b7bf4db100dcb5[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Thu Jan 25 23:58:12 2024 +0100
+
+    Pequena correção na chamada da chave rain utilizando operador ternário para caso de valores inexistentes
+
+[33mcommit a6dbf03570d54d6f55b18fa18b16554294b8d323[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Thu Jan 25 18:13:18 2024 +0100
+
+    Adição de precipitação nas últimas 3 horas
+
+[33mcommit e7d1cc3cc8ce6bdd101087db63269762472049f1[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Thu Jan 25 13:41:46 2024 +0100
+
+    Correção no tamanho do mapa
+
+[33mcommit 0430f5b9137fea5d573bcdedcd07df73d1f090b4[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Thu Jan 25 13:29:06 2024 +0100
+
+    Refatoramento do código e adição de mapa
+
+[33mcommit 44efca6c6be947209286dfb38a3986d7483d2deb[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Mon Jan 22 17:46:41 2024 +0100
+
+    Lado esquerdo refeito
+
+[33mcommit f332714435c66f368adc5bfd16a5597922db726a[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Sat Jan 20 13:16:00 2024 +0100
+
+    Teste de localização
+
+[33mcommit 4934717ee64bca474ab441ade82e488bfcc0e0e9[m
+Author: Kevin Marlei <kevin_SSDP@hotmail.com>
+Date:   Fri Jan 19 17:54:59 2024 +0100
+
+    primeiro commit de testes
