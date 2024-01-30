@@ -43,10 +43,13 @@ async function localStorageReserv(local, estado, pais) {
 
 let localidade;
 //caixa img-clima
+const caixaImgClima = document.querySelector('.caixa-img-clima')
 const nomeLocal = document.querySelector('.nome-local');
 const pais = document.querySelector('.pais');
 const imgClima = document.querySelector('.icon-clima');
 const descricaoClima = document.querySelector('.descricao-clima');
+const msgRaio = document.createElement('p');
+
 //caixa de busca
 const caixaBusca = document.querySelector('.caixa-busca');
 const adicionarLocal = document.querySelector('.img-adicionar');
@@ -203,10 +206,23 @@ function renderizarLadoEsquerdo(response) {
   if ((dia && horarioAtual < horarioNoturno) || (isHorarioPrevisao18h && horarioAtual < 18)) {
     imgClima.src = urlImagens.iconDia;
     ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffDia}')`;
+    // ////
+    if(response.list[0].weather[0].main === 'Rain'){
+      caixaImgClima.appendChild(msgRaio);
+      msgRaio.textContent = 'Com possíveis raios e trovões ⚡';
+      msgRaio.style.fontSize = "clamp(0.5em, .5em + .9vw, 2em)";
+    }
   } else {
     imgClima.src = urlImagens.iconNoite;
     ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffNoite}')`;
+// ////
+    if(response.list[0].weather[0].main === 'Rain'){
+      caixaImgClima.appendChild(msgRaio);
+      msgRaio.textContent = 'Com possíveis raios e trovões ⚡';
+      msgRaio.style.fontSize = "clamp(0.5em, .5em + .9vw, 2em)";
+    }
   }
+
   if (tempAPI >= 0) {
     imgPositivo.style.display = 'flex';
     imgNegativo.style.display = 'none';
