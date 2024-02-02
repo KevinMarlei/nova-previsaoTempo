@@ -1,5 +1,3 @@
-# Título do Projeto
-
 # Previsão do Tempo
 
 Este projeto utiliza a API OpenWeather para fornecer informações detalhadas sobre a previsão do tempo com base em um local específico.
