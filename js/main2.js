@@ -13,7 +13,6 @@ async function apiData(local, estado, pais) {
 
     });
     const responseData = response.data;
-    console.log(responseData);
     renderizarLadoEsquerdo(responseData);
   } catch (error) {
     console.error('Erro na requisição api', error)
@@ -33,7 +32,6 @@ async function localStorageReserv(local, estado, pais) {
 
     });
     const responseData = response.data;
-    console.log(responseData);
 
   } catch (error) {
     console.error('Erro na requisição api', error);
@@ -188,19 +186,10 @@ function renderizarLadoEsquerdo(response) {
   }
   function imagensClima() {
     const descricaoClimaAPI = response.list[0].weather[0].description;
-    console.log(descricaoClimaAPI, 'AQUIUIUIUIUIUIU')
     const urlImagens = imagens.find(img => img.descricao.includes(descricaoClimaAPI));
-    const codigoIcon = response.list[0].weather[0].icon;
-    const dia = codigoIcon.includes('d');
+    const dia = response.list[0].sys.pod.includes('d');
 
-    const horarioAtual = new Date().getHours();
-  const horarioNoturno = 18;
-
-  // Obtém a data e hora do objeto response
-  const horarioPrevisao = new Date(response.list[0].dt_txt);
-  const isHorarioPrevisao18h = horarioPrevisao.getHours() === 18;
-
-  if ((dia && horarioAtual < horarioNoturno) || (isHorarioPrevisao18h && horarioAtual < 18)) {
+  if (dia) {
     imgClima.src = urlImagens.iconDia;
     ladoEsquerdoBackground.style.backgroundImage = `url('${urlImagens.giffDia}')`;
   } else {
@@ -215,7 +204,6 @@ function renderizarLadoEsquerdo(response) {
     imgNegativo.style.display = 'flex';
   }
   }
-  console.log(response.city.coord.lat, response.city.coord.lon)
   renderTextosLadoEsquerdo();
   imagensClima();
   const lat = response.city.coord.lat;

@@ -66,15 +66,12 @@ function armazenarIconPorDia(response) {
     let passarParaARray = [];
     response.forEach((element, index) => {
         const iconDoDia = element.weather[0];
-        console.log(`${index}: ${iconDoDia}`);
         passarParaARray.push(iconDoDia);
     });
-    console.log(passarParaARray);
     renderizarImgPorDia(passarParaARray)
 }
 
 function renderizarImgPorDia(response) {
-    console.log(response, ' AQUIIIIIIIIIIII')
     response.forEach((element, index) => {
         const descricaoClimaDia = element.description;
         const enderecoDireitoImagens = imagens.find(img => img.descricao.includes(descricaoClimaDia));
@@ -86,9 +83,8 @@ function renderizarImgPorDia(response) {
             dias.style.backgroundImage = `url('${enderecoDireitoImagens.giffDia}')`;
             previsoes.src = enderecoDireitoImagens.iconDia;
             prev.textContent = letraMaiuscula(descricaoClimaDia);
-            console.log(`Imagem para o dia ${index}: ${enderecoDireitoImagens.iconDia}`);
         } else {
-            console.log(`Não foi encontrada uma imagem correspondente para o dia ${index}`);
+            console.warn(`Não foi encontrada uma imagem correspondente para o dia ${index}`);
         }
     });
 }
@@ -111,7 +107,6 @@ function minMax(response) {
         const temperaturaMinima = Math.min(...temperaturasDoDia);
         const temperaturaMaxima = Math.max(...temperaturasDoDia);
 
-        console.log(`Para o dia ${diaAdia}: Temperatura Mínima: ${temperaturaMinima}°C, Temperatura Máxima: ${temperaturaMaxima}°C`);
         minimo(temperaturaMinima, i);
         maximo(temperaturaMaxima, i);
     }

@@ -10,7 +10,6 @@ async function apiForecast(local, estado, pais) {
             }
         });
         const responseData = response.data;
-        console.log(responseData);
         datas(responseData);
     } catch (error) {
         console.error('Erro na requisição api', error);
@@ -22,7 +21,6 @@ function datas(response) {
     for (let i = 0; i < 5; i++) {
         const diaAtual = response.list[i * 8].dt_txt.slice(0, 10);
         const datas = response.list.filter(item => item.dt_txt.includes(diaAtual));
-        console.log(datas);
         
         // Verifica se a data já foi adicionada
         const dataExistente = datasSeparadas.find(item => item[0].dt_txt.includes(diaAtual));
@@ -30,7 +28,6 @@ function datas(response) {
             datasSeparadas.push(datas);
         }
     }
-    console.log(datasSeparadas);
     exibirDatas(datasSeparadas);
     minMax(datasSeparadas)
 }
@@ -72,9 +69,7 @@ function obterDiasDaSemana() {
     }
   }
   
-  const diasDaSemana = obterDiasDaSemana();
-  console.log(diasDaSemana);
-  
+  const diasDaSemana = obterDiasDaSemana();  
 
 const previsaoLocalStorage = apiForecast(localStorage.getItem("localidade"))
 if (previsaoLocalStorage) {
