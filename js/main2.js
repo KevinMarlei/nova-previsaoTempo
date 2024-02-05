@@ -76,6 +76,7 @@ function renderizarAddClick() {
     caixaBusca.appendChild(botaoOK);
     cancelarAdd.appendChild(imgCancelar)
     caixaBusca.appendChild(cancelarAdd);
+    inputCriado.focus();
     inputCriado.placeholder = 'Adicione ou modifique o local desejado'
     imgCancelar.src = './icon/cancelar.svg';
     botaoOK.textContent = 'OK'

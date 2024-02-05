@@ -64,7 +64,7 @@ const imagens = [
 
 function armazenarIconPorDia(response) {
     let passarParaARray = [];
-    response.forEach((element, index) => {
+    response.forEach((element) => {
         const iconDoDia = element.weather[0];
         passarParaARray.push(iconDoDia);
     });
