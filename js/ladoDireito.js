@@ -35,7 +35,7 @@ function datas(response) {
 
 function obterDiasDaSemana() {
     const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
-    const hoje = new Date(+1);
+    const hoje = new Date();
     const diasFormatados = [];
   
     for (let i = 0; i < 5; i++) {
