@@ -38,9 +38,9 @@ function obterDiasDaSemana() {
     const hoje = new Date();
     const diasFormatados = [];
   
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       const dataAtualizada = new Date();
-      dataAtualizada.setDate(hoje.getDate() + i);
+      dataAtualizada.setDate(hoje.getDate() + i +1);
       const diaSemana = diasDaSemana[dataAtualizada.getDay()];  
       diasFormatados.push({ diaSemana});
     }
